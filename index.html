@@ -11,9 +11,23 @@
     function computerPlay (randomArray) {
         return randomArray[Math.floor(Math.random() * randomArray.length)];
     }
-    
-    let x = computerPlay(randomArray);
+
+    let computerSelection = computerPlay(randomArray);
+    let playerSelection = "rock";
+
+    function playRound(playerSelection,computerSelection) {
+        if (computerSelection = "rock") {
+            return "it's a tie!";
+        } else if (computerSelection = "paper") {
+            return "you lose.  paper beats rock!";
+            } else {
+                return "you win.  rock beats scissors!"
+                }
+    }
+    let x = playRound(playerSelection,computerSelection);
+    console.log(playerSelection, computerSelection);
     console.log(x);
+    
   </script>
 </body>
 </html>
