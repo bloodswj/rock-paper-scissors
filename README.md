@@ -1,2 +1,3 @@
-# rock-paper-scissors assignment from The Odin Project
+The Odin Project
+Rock Paper Scissors assignment
 https://www.theodinproject.com/courses/foundations/lessons/rock-paper-scissors
