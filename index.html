@@ -6,27 +6,49 @@
 </head>
 <body>
   <script>
-    let randomArray = ['rock' , 'paper' , 'scissors'];
+    
 
-    function computerPlay (randomArray) {
-        return randomArray[Math.floor(Math.random() * randomArray.length)];
+    function computerPlay () {
+      const choices = ['rock', 'paper', 'scissors'];
+      const randomArray = Math.floor(Math.random() * choices.length);
+        return choices[randomArray];
     }
+    
 
-    let computerSelection = computerPlay(randomArray);
-    let playerSelection = "rock";
+    function playRound() {
+      let computerSelection = computerPlay();
+      let playerSelection = "rock";
+        function draw() {
+          if (computerSelection = playerSelection);
+          let x = "it's a draw!";
+          return x;
+        }
+        function win(playerSelection, computerSelection) {
+          if ('rock', 'scissors') {
+            let x = "you win!"
+            return x
+          } else if ('paper', 'rock') {
+            let x = "you win!"
+            return x
+          } else if ('scissors', 'paper') {
+            let x = "you win!"
+            return x
+          }
+        }
+        function lose(playerSelection, computerSelection) {
+          if ('scissors', 'rock') {
+            let x = 'you lose!'
+          } else if ('rock', 'paper') {
+            let x = "you lose!"
+            return x
+          } else if ('paper', 'scissors') {
+            let x = 'you lose!'
+            return x
+          }
+        }
+        console.log(playRound)
+      }
 
-    function playRound(playerSelection,computerSelection) {
-        if (computerSelection = "rock") {
-            return "it's a tie!";
-        } else if (computerSelection = "paper") {
-            return "you lose.  paper beats rock!";
-            } else {
-                return "you win.  rock beats scissors!"
-                }
-    }
-    let x = playRound(playerSelection,computerSelection);
-    console.log(playerSelection, computerSelection);
-    console.log(x);
     
   </script>
 </body>
