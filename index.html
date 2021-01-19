@@ -10,46 +10,41 @@
 
     function computerPlay () {
       const choices = ['rock', 'paper', 'scissors'];
-      const randomArray = Math.floor(Math.random() * choices.length);
+      let randomArray = Math.floor(Math.random() * choices.length);
         return choices[randomArray];
     }
     
+    let computerSelection = computerPlay();
+    let playerSelection = "rock";
+    const drawMessage = "it's a draw!"
+    const winMessage = "you win!"
+    const loseMessage = "you lose!"
 
     function playRound() {
-      let computerSelection = computerPlay();
-      let playerSelection = "rock";
-        function draw() {
-          if (computerSelection = playerSelection);
-          let x = "it's a draw!";
-          return x;
-        }
-        function win(playerSelection, computerSelection) {
-          if ('rock', 'scissors') {
-            let x = "you win!"
-            return x
-          } else if ('paper', 'rock') {
-            let x = "you win!"
-            return x
-          } else if ('scissors', 'paper') {
-            let x = "you win!"
-            return x
-          }
-        }
-        function lose(playerSelection, computerSelection) {
-          if ('scissors', 'rock') {
-            let x = 'you lose!'
-          } else if ('rock', 'paper') {
-            let x = "you lose!"
-            return x
-          } else if ('paper', 'scissors') {
-            let x = 'you lose!'
-            return x
-          }
-        }
-        console.log(playRound)
-      }
 
-    
+          if (playerSelection = 'rock') && (computerSelection = 'rock') {
+          return drawMessage
+          } else if ('paper' , 'paper') {
+            return drawMessage
+          } else if ('scissors' , 'scissors'){
+            return drawMessage
+          } else if ('rock', 'scissors') {
+            return winMessage
+          } else if ('paper', 'rock') {
+            return winMessage
+          } else if ('scissors', 'paper') {
+            return winMessage
+          } else if ('scissors', 'rock') {
+            return loseMessage
+          } else if ('rock', 'paper') {
+            return loseMessage
+          } else if ('paper', 'scissors') {
+            return loseMessage
+          }     
+      }
+    console.log(playRound)
+    console.log(playRound(computerSelection, playerSelection))
+    console.log(computerSelection, playerSelection)
   </script>
 </body>
 </html>
