@@ -24,23 +24,37 @@
         return choices[randomArray];
     }
     
-    let computerScore =  document.getElementById('computerscore')
-    let playerScore =  document.getElementById('playerscore')
+    
     let computerSelection = computerPlay();
     let playerSelection = "rock";
     const drawMessage = "it's a draw!"
     const winMessage = "you win!"
     const loseMessage = "you lose!"
 
+    function incrementPlayerScore() {
+      let playerScore = document.getElementById('playerscore')
+      let pScore = playerScore.innerHTML
+      pScore++
+      playerScore.innerHTML = pScore
+      return winMessage
+    }
+
+    function incrementComputerScore() {
+      let computerScore = document.getElementById('computerscore')
+      let cScore = computerScore.innerHTML
+      cScore++
+      computerScore.innerHTML = cScore
+      return loseMessage
+    }
+
     function playRound(a,b) {
+
       if ((a === 'rock' && b === 'rock') || (a === 'paper' && b === 'paper') || (a === 'scissors' && b === 'scissors')) {
         return drawMessage
         } else if ((a === 'rock' && b === 'scissors') || (a === 'paper' && b === 'rock') || (a === 'scissors' && b === 'paper')) {
-          return winMessage
-          playerScore += 1
+          return incrementPlayerScore()
         } else if ((a === 'scissors' && b === 'rock') || (a === 'rock' && b === 'paper') || (a === 'paper' && b === 'scissors')) {
-          return loseMessage
-          computerScore += 1
+          return incrementComputerScore()
         }
       }
 
