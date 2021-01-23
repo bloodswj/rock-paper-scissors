@@ -24,9 +24,41 @@
         return choices[randomArray];
     }
     
-    
-    let computerSelection = computerPlay();
-    let playerSelection = "rock";
+    let computerSelection = computerPlay();    
+    let playerScore = 0
+    let computerScore = 0
+    let pSelection = prompt("Enter rock, paper, or scissors.");
+      if (pSelection.toLowerCase() == 'rock') {
+        playerSelection = 'rock'
+      } else if (pSelection.toLowerCase() == 'paper') {
+        playerSelection = 'paper'
+      } else if (pSelection.toLowerCase() == 'scissors') {
+        playerSelection = 'scissors'
+      } else {
+        alert("Invalid selection.  Try again.")
+      }
+
+
+    function game(){
+
+
+      function playRound(playerSelection, computerSelection) {
+        if ((playerSelection === 'rock' && computerSelection === 'rock') || (playerSelection === 'paper' && computerSelection === 'paper') || (playerSelection === 'scissors' && computerSelection === 'scissors')) {
+        return drawMessage
+        } else if ((a === 'rock' && b === 'scissors') || (a === 'paper' && b === 'rock') || (a === 'scissors' && b === 'paper')) {
+        return ('you win!' , playerScore++)
+        } else if ((a === 'scissors' && b === 'rock') || (a === 'rock' && b === 'paper') || (a === 'paper' && b === 'scissors')) {
+        return ('you lose!' , computerScore++)
+        }
+      }
+   
+    }
+  
+
+    console.log(playerScore , computerScore) 
+
+
+    /*
     const drawMessage = "it's a draw!"
     const winMessage = "you win!"
     const loseMessage = "you lose!"
@@ -47,18 +79,7 @@
       return loseMessage
     }
 
-    function playRound(a,b) {
-
-      if ((a === 'rock' && b === 'rock') || (a === 'paper' && b === 'paper') || (a === 'scissors' && b === 'scissors')) {
-        return drawMessage
-        } else if ((a === 'rock' && b === 'scissors') || (a === 'paper' && b === 'rock') || (a === 'scissors' && b === 'paper')) {
-          return incrementPlayerScore()
-        } else if ((a === 'scissors' && b === 'rock') || (a === 'rock' && b === 'paper') || (a === 'paper' && b === 'scissors')) {
-          return incrementComputerScore()
-        }
-      }
-
-/*      
+ 
 
     function scoreBoard() {
 
@@ -83,8 +104,6 @@
 
 
 
-    console.log(playerSelection, computerSelection)
-    console.log(playRound(playerSelection, computerSelection))
 
    
   </script>
